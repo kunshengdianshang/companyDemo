@@ -21,72 +21,78 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="#FFCF31">
+                android:background="#fff">
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="44dp"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="17dp">
-                    <ImageView
-                        android:layout_width="23dp"
-                        android:layout_height="29dp"
-                        android:layout_gravity="center_vertical"
-                        android:src="@mipmap/positioning"
-                        android:layout_marginLeft="28dp"
-                        android:layout_marginRight="18dp"/>
+                    android:layout_height="@dimen/dp_200"
+                    android:orientation="vertical"
+                    android:background="@mipmap/icon_bg_1">
                     <LinearLayout
-                        android:id="@+id/search_linearlayout"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="44dp"
                         android:orientation="horizontal"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:background="@drawable/bg_search">
+                        android:layout_marginTop="31dp">
                         <ImageView
-                            android:layout_width="19dp"
-                            android:layout_height="19dp"
-                            android:src="@mipmap/search"
+                            android:layout_width="23dp"
+                            android:layout_height="29dp"
                             android:layout_gravity="center_vertical"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="7dp"
-                            android:layout_marginBottom="5dp"/>
-                        <EditText
-                            android:id="@+id/search_edit"
+                            android:src="@mipmap/positioning"
+                            android:layout_marginLeft="28dp"
+                            android:layout_marginRight="18dp"/>
+                        <LinearLayout
+                            android:id="@+id/search_linearlayout"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="10dp"
-                            android:textColorHint="#FF999999"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginBottom="8dp"
-                            android:hint="复制宝贝标题，先领券在购物"
-                            android:background="@null"
-                            android:layout_marginLeft="11dp"
-                            android:focusable="false" />
+                            android:layout_height="30dp"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_search">
+                            <ImageView
+                                android:layout_width="19dp"
+                                android:layout_height="19dp"
+                                android:src="@mipmap/search"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="7dp"
+                                android:layout_marginBottom="5dp"/>
+                            <EditText
+                                android:id="@+id/search_edit"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="10dp"
+                                android:textColorHint="#FF999999"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:hint="复制宝贝标题，先领券在购物"
+                                android:background="@null"
+                                android:layout_marginLeft="11dp"
+                                android:focusable="false" />
+                        </LinearLayout>
+                        <ImageView
+                            android:id="@+id/scanning"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/scanning_img"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginLeft="21dp"
+                            android:layout_gravity="center_vertical"/>
                     </LinearLayout>
-                    <ImageView
-                        android:id="@+id/scanning"
-                        android:layout_width="18dp"
-                        android:layout_height="18dp"
-                        android:scaleType="fitXY"
-                        android:src="@mipmap/scanning_img"
-                        android:layout_marginRight="16dp"
-                        android:layout_marginLeft="21dp"
-                        android:layout_gravity="center_vertical"/>
                 </LinearLayout>
                 <com.youth.banner.Banner
                     android:id="@+id/banner_hand"
                     android:layout_width="match_parent"
-                    android:layout_height="177dp"
+                    android:layout_height="@dimen/dp_177"
                     app:image_scale_type="fit_xy"
                     android:background="@mipmap/banner_img"
-                    android:layout_marginTop="19dp"
-                    android:layout_marginLeft="17dp"
-                    android:layout_marginRight="17dp"/>
-            </LinearLayout>
+                    android:layout_marginTop="@dimen/dp_80"
+                    android:layout_marginLeft="@dimen/dp_17"
+                    android:layout_marginRight="@dimen/dp_17"/>
+            </RelativeLayout>
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_function_ball"
                 android:layout_width="match_parent"

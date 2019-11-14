@@ -21,9 +21,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.TenantsActivity"></activity>
+        <activity android:name=".activity.DetailsActivity"></activity>
+        <activity android:name=".activity.TenantsActivity" />
         <activity android:name=".activity.StoreActivity" />
-        <activity android:name=".activity.RelaNameActivity"></activity>
+        <activity android:name=".activity.RelaNameActivity" />
         <activity android:name=".activity.MyCollectedActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

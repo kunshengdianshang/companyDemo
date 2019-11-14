@@ -62,14 +62,21 @@
                                 android:id="@+id/search_edit"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:textSize="10dp"
                                 android:textColorHint="#FF999999"
                                 android:layout_marginTop="8dp"
                                 android:layout_marginBottom="8dp"
-                                android:hint="复制宝贝标题，先领券在购物"
+                                android:hint="搜索你要找的内容"
                                 android:background="@null"
                                 android:layout_marginLeft="11dp"
                                 android:focusable="false" />
+                            <ImageView
+                                android:layout_width="@dimen/dp_17"
+                                android:layout_height="@dimen/dp_14"
+                                android:background="@mipmap/ic_launcher_round"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="@dimen/dp_8"/>
                         </LinearLayout>
                         <ImageView
                             android:id="@+id/scanning"

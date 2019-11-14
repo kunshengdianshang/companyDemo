@@ -14,6 +14,8 @@ import com.example.mdmall.BaseFragment;
 import com.example.mdmall.R;
 import com.example.mdmall.activity.MyCollectedActivity;
 import com.example.mdmall.activity.RelaNameActivity;
+import com.example.mdmall.activity.StoreActivity;
+import com.example.mdmall.activity.TenantsActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -41,6 +43,17 @@ public class MyFragment extends BaseFragment {
     public void text_shiming_Click(){
         Intent intent = new Intent(getActivity(), RelaNameActivity.class);
         startActivity(intent);
+    }
+    @OnClick({R.id.my_focus,R.id.my_in})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.my_focus:
+                startActivity(new Intent(getActivity(), TenantsActivity.class));
+                break;
+            case R.id.my_in:
+                startActivity(new Intent(getActivity(), StoreActivity.class));
+                break;
+        }
     }
     @Nullable
     @Override

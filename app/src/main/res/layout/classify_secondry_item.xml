@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/secondry_item_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#252525"
+        android:textSize="@dimen/dp_11"
+        android:layout_marginTop="@dimen/dp_17"/>
+    <com.example.mdmall.view.NonScrollGridView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="3"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:background="@drawable/rounded_back2"
+        android:id="@+id/secondary_gridView"
+        android:gravity="center_horizontal"/>
+</LinearLayout>

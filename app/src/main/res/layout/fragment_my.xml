@@ -4,10 +4,6 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
-    <com.andview.refreshview.XRefreshView
-        android:id="@+id/x_refreshView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nsv_hand_pick"
@@ -125,6 +121,7 @@
                             />
                     </RelativeLayout>
                     <RelativeLayout
+                        android:id="@+id/my_focus"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent">
                         <LinearLayout
@@ -377,6 +374,7 @@
                         android:gravity="center"
                         android:layout_height="match_parent">
                         <RelativeLayout
+                            android:id="@+id/my_in"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -487,7 +485,7 @@
                 android:layout_gravity="center_horizontal"
                 app:cardCornerRadius="@dimen/dp_8"
                 android:layout_width="@dimen/dp_340"
-                android:layout_height="@dimen/dp_90">
+                android:layout_height="@dimen/dp_95">
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
@@ -618,5 +616,4 @@
             </androidx.cardview.widget.CardView>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
-    </com.andview.refreshview.XRefreshView>
 </LinearLayout>

@@ -91,7 +91,7 @@
                 android:id="@+id/img_all"
                 android:layout_width="@dimen/dp_16"
                 android:layout_height="@dimen/dp_16"
-                android:src="@mipmap/ic_launcher"
+                android:src="@mipmap/icon_weixuanze"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/dp_23"
                 />

@@ -87,25 +87,52 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         >
-        <TextView
-            android:layout_marginBottom="@dimen/dp_21"
-            android:layout_marginRight="@dimen/dp_13"
-            android:gravity="center"
-            android:layout_width="@dimen/dp_57"
-            android:layout_height="@dimen/dp_25"
-            android:text="立即购买"
-            android:textSize="@dimen/sp_11"
-            android:textColor="#fff"
-            android:background="@drawable/btn_radio_yellow"
-            />
-        <ImageView
-            android:layout_marginBottom="@dimen/dp_22"
-            android:layout_width="@dimen/dp_25"
-            android:layout_height="@dimen/dp_25"
-            android:src="@mipmap/ic_launcher"
-            android:id="@+id/img_add_shopcar"
-            android:layout_marginRight="@dimen/dp_12"
-            />
+
+        <LinearLayout
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_43"
+            android:layout_width="@dimen/dp_88"
+            android:layout_height="@dimen/dp_26"
+            android:orientation="horizontal"
+            android:background="@drawable/btn_border_radio_gray"
+            android:gravity="center_vertical"
+            >
+            <TextView
+                android:gravity="center"
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/sp_18"
+                android:text="-"
+                android:textColor="#868686"
+                />
+            <View
+                android:layout_width="@dimen/dp_1"
+                android:layout_height="match_parent"
+                android:background="#EEEEEE"
+                />
+            <TextView
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="1"
+                android:gravity="center"
+                android:textColor="#252525"
+                android:textSize="@dimen/sp_11"
+                />
+            <View
+                android:layout_width="@dimen/dp_1"
+                android:layout_height="match_parent"
+                android:background="#EEEEEE"
+                />
+            <TextView
+                android:gravity="center"
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/sp_18"
+                android:text="+"
+                android:textColor="#868686"
+                />
+        </LinearLayout>
 
     </LinearLayout>
 

@@ -6,4 +6,8 @@
     <color name="F2F2F2_color">#FFF2F2F2</color>
     <color name="FFCF31">#FFCF31</color>
     <color name="AAAAAA">#AAAAAA</color>
+
+    <color name="yellow_FFCF31">#FFCF31</color>
+    <color name="gray_E5E4E3">#E5E4E3</color>
+    <color name="white">#fff</color>
 </resources>

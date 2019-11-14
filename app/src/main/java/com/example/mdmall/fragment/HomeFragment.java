@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ScrollView;
 
 import androidx.annotation.NonNull;
@@ -16,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mdmall.BaseFragment;
 import com.example.mdmall.R;
+import com.example.mdmall.activity.SearchActivity;
 import com.example.mdmall.adapter.NsGvHandPickRecommendAdapter;
 import com.example.mdmall.adapter.RvFunctionBallAdapter;
 import com.example.mdmall.view.NonScrollGridView;
@@ -46,6 +48,11 @@ public class HomeFragment extends BaseFragment {
     }
 
     public HomeFragment() {
+    }
+    @OnClick(R.id.search_linearlayout)
+    public void search_linearlayout_Click(){
+        Intent intent = new Intent(getActivity(), SearchActivity.class);
+        startActivity(intent);
     }
     @Nullable
     @Override

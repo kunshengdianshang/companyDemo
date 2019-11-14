@@ -7,6 +7,9 @@
     android:layout_height="match_parent"
     tools:context=".activity.RelaNameActivity">
 
+    <!--
+        title
+    -->
     <RelativeLayout
         android:id="@+id/rela_title"
         android:layout_width="match_parent"
@@ -71,8 +74,8 @@
             android:gravity="center"
             android:textStyle="bold"
             android:textSize="@dimen/sp_15"
-            android:textColor="#fff"
-            android:background="@drawable/btn_radio_yellow"
+            android:textColor="#FFCF31"
+            android:background="@drawable/btn_radio_gray_d2d2d2"
             />
         <TextView
             android:layout_alignParentRight="true"
@@ -85,8 +88,8 @@
             android:gravity="center"
             android:textStyle="bold"
             android:textSize="@dimen/sp_15"
-            android:textColor="#fff"
-            android:background="@drawable/btn_radio_yellow"
+            android:textColor="#FFCF31"
+            android:background="@drawable/btn_radio_gray_d2d2d2"
             />
 
 
@@ -141,6 +144,7 @@
       填写信息
     -->
     <LinearLayout
+        android:id="@+id/linear_edit"
         android:layout_marginTop="@dimen/dp_103"
         android:layout_below="@+id/rela_title"
         android:layout_marginRight="@dimen/dp_16"
@@ -200,6 +204,7 @@
       上传身份证
     -->
     <LinearLayout
+        android:id="@+id/linear_shangchuan"
         android:visibility="gone"
         android:layout_marginTop="@dimen/dp_127"
         android:layout_below="@+id/rela_title"
@@ -211,19 +216,20 @@
         <ImageView
             android:layout_width="@dimen/dp_146"
             android:layout_height="@dimen/dp_122"
-            android:src="@mipmap/ic_launcher"
+            android:src="@mipmap/shenfenz_zhnegmian"
             />
         <ImageView
             android:layout_marginTop="@dimen/dp_60"
             android:layout_width="@dimen/dp_146"
             android:layout_height="@dimen/dp_122"
-            android:src="@mipmap/ic_launcher"
+            android:src="@mipmap/shenfenz_fanmian"
             />
     </LinearLayout>
     <!--
-       完成
+       完成 或 失败
     -->
     <LinearLayout
+        android:id="@+id/linear_ok"
         android:visibility="gone"
         android:layout_marginTop="@dimen/dp_178"
         android:layout_below="@+id/rela_title"
@@ -250,6 +256,7 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/but_ok"
         android:layout_marginBottom="@dimen/dp_58"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"

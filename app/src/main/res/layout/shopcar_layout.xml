@@ -18,11 +18,13 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             >
+            <!--
+               商家信息
+            -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginBottom="@dimen/dp_21"
                 >
                 <ImageView
                     android:layout_marginTop="@dimen/dp_21"
@@ -51,7 +53,53 @@
                     />
 
             </LinearLayout>
+            <!--
+               购物车显示优惠信息
+            -->
+            <LinearLayout
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                >
+                <TextView
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/dp_9"
+                    android:textColor="#FFCF31"
+                    android:textSize="@dimen/sp_10"
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="@dimen/dp_15"
+                    android:text="满减"
+                    android:background="@drawable/btn_border_radio_yellow"
+                    />
+                <TextView
+                    android:layout_marginLeft="@dimen/dp_3"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="每129元减30元"
+                    android:textColor="#252525"
+                    android:textSize="@dimen/sp_11"
+                    />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/dp_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="去凑单>"
+                        android:textSize="@dimen/sp_11"
+                        android:textColor="#FFCF31"
+                        />
+                </RelativeLayout>
+
+            </LinearLayout>
             <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="@dimen/dp_15"
                 android:id="@+id/recy"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>

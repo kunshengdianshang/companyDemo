@@ -27,7 +27,7 @@
                 头像设置 店铺关注
             -->
             <LinearLayout
-                android:background="#FFCF31"
+
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_200">
@@ -56,6 +56,7 @@
                     android:layout_height="@dimen/dp_3"
                     android:background="#FFCF31"
                     />
+
                 <RelativeLayout
                     android:background="#FFCF31"
                     android:layout_width="match_parent"
@@ -241,6 +242,7 @@
                     android:layout_height="match_parent">
 
                     <RelativeLayout
+                        android:id="@+id/rela_wodedingdan"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -266,6 +268,7 @@
                             />
                     </RelativeLayout>
                     <RelativeLayout
+                        android:id="@+id/rela_daifukuan"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -291,6 +294,7 @@
                             />
                     </RelativeLayout>
                     <RelativeLayout
+                        android:id="@+id/rela_daishouhuo"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -316,6 +320,7 @@
                             />
                     </RelativeLayout>
                     <RelativeLayout
+                        android:id="@+id/rela_daipingjia"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"

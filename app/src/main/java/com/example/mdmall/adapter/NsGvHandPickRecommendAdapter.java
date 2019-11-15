@@ -1,6 +1,7 @@
 package com.example.mdmall.adapter;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,8 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.mdmall.R;
+import com.example.mdmall.activity.DetailsActivity;
+import com.example.mdmall.activity.StoreActivity;
 
 import java.util.List;
 
@@ -53,6 +56,13 @@ public class NsGvHandPickRecommendAdapter extends BaseAdapter {
             holder = (ViewHolder) view.getTag();
         }
         holder.name.setText(data.get(i));
+        holder.linear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DetailsActivity.open(context,"1");
+            }
+
+        });
         return view;
     }
 
@@ -60,6 +70,8 @@ public class NsGvHandPickRecommendAdapter extends BaseAdapter {
     class ViewHolder {
         @BindView(R.id.iv_goods_name)
         TextView name;
+        @BindView(R.id.iv_goods_linear)
+        LinearLayout linear;
         ViewHolder(View view) {
             ButterKnife.bind(this, view);
         }

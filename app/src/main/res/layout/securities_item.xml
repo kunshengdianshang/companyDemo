@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginRight="@dimen/dp_10">
+    <TextView
+        android:id="@+id/securities_text"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_22"
+        android:text="满99减30"
+        android:textColor="#C6A544"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:background="@drawable/rounded_back"
+        android:paddingLeft="@dimen/dp_5"
+        android:paddingRight="@dimen/dp_5"/>
+</LinearLayout>

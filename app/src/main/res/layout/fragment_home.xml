@@ -36,6 +36,7 @@
                         android:orientation="horizontal"
                         android:layout_marginTop="31dp">
                         <ImageView
+                            android:id="@+id/home_set"
                             android:layout_width="23dp"
                             android:layout_height="29dp"
                             android:layout_gravity="center_vertical"
@@ -74,7 +75,7 @@
                             <ImageView
                                 android:layout_width="@dimen/dp_17"
                                 android:layout_height="@dimen/dp_14"
-                                android:background="@mipmap/ic_launcher_round"
+                                android:background="@mipmap/icon_xiangji_3"
                                 android:layout_gravity="center_vertical"
                                 android:layout_marginRight="@dimen/dp_8"/>
                         </LinearLayout>

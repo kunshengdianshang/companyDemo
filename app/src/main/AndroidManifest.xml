@@ -22,9 +22,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.SearchActivity"></activity>
+        <activity android:name=".activity.PositioningActivity"></activity>
+        <activity android:name=".activity.RegisterPhoneActivity" />
+        <activity android:name=".activity.RegisterActivity" />
+        <activity android:name=".activity.LoginActivity" />
+        <activity android:name=".activity.SearchActivity" />
         <activity android:name=".activity.TenantsActivity" />
-        <activity android:name=".activity.DetailsActivity"></activity>
+        <activity android:name=".activity.DetailsActivity" />
         <activity android:name=".activity.StoreActivity" />
         <activity android:name=".activity.RelaNameActivity" />
         <activity android:name=".activity.MyCollectedActivity" />

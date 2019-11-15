@@ -5,17 +5,21 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.viewpager.widget.ViewPager;
 
 import com.example.mdmall.BaseFragment;
 import com.example.mdmall.R;
+import com.example.mdmall.activity.DingDanActivity;
 import com.example.mdmall.activity.MyCollectedActivity;
 import com.example.mdmall.activity.RelaNameActivity;
 import com.example.mdmall.activity.StoreActivity;
 import com.example.mdmall.activity.TenantsActivity;
+import com.google.android.material.tabs.TabLayout;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -55,6 +59,19 @@ public class MyFragment extends BaseFragment {
                 break;
         }
     }
+    @OnClick(R.id.rela_wodedingdan)
+    public void rela_wodedingdan_Click(){
+        Intent intent = new Intent(getActivity(), DingDanActivity.class);
+        startActivity(intent);
+    };
+    @BindView(R.id.rela_daifukuan)
+    RelativeLayout rela_daifukuan;
+    @BindView(R.id.rela_daishouhuo)
+    RelativeLayout rela_daishouhuo;
+    @BindView(R.id.rela_daipingjia)
+    RelativeLayout rela_daipingjia;
+
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

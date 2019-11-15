@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.DingDanActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_20"
+        android:background="@color/yellow_FFCF31"
+        />
+    <RelativeLayout
+        android:background="@color/yellow_FFCF31"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_42">
+        <!--
+        搜索框
+    -->
+        <RelativeLayout
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_25">
+            <ImageView
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_centerVertical="true"
+                android:layout_width="@dimen/dp_10"
+                android:layout_height="@dimen/dp_19"
+                android:src="@mipmap/ic_launcher"
+                />
+            <RelativeLayout
+                android:layout_marginRight="@dimen/dp_25"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_width="@dimen/dp_291"
+                android:layout_height="@dimen/dp_25"
+                android:background="@mipmap/icon_sousuokuang"
+                >
+
+                <EditText
+                    android:layout_marginRight="@dimen/dp_14"
+                    android:layout_marginLeft="@dimen/dp_14"
+                    android:layout_centerVertical="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:textColorHint="#8D8D8D"
+                    android:textSize="@dimen/sp_12"
+                    android:textColor="#8D8D8D"
+                    android:hint="搜索我的订单"
+                    />
+                <ImageView
+                    android:layout_marginRight="@dimen/dp_14"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="@dimen/dp_13"
+                    android:layout_height="@dimen/dp_13"
+                    android:src="@mipmap/icon_sousuo"
+                    />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayout"
+        app:tabSelectedTextColor="@color/yellow_FFCF31"
+        app:tabTextColor="@color/black_252525"
+        app:tabIndicatorColor="@color/yellow_FFCF31"
+        app:tabIndicatorFullWidth="false"
+        app:tabIndicatorHeight="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <androidx.viewpager.widget.ViewPager
+        android:layout_marginTop="@dimen/dp_2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/viewpager"
+        />
+
+</LinearLayout>

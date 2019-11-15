@@ -1,5 +1,6 @@
 package com.example.mdmall.fragment;
 
+import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,6 +10,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,7 +23,10 @@ import com.example.mdmall.activity.SearchActivity;
 import com.example.mdmall.adapter.NsGvHandPickRecommendAdapter;
 import com.example.mdmall.adapter.RvFunctionBallAdapter;
 import com.example.mdmall.view.NonScrollGridView;
-import com.yzq.zxinglibrary.android.CaptureActivity;
+import com.github.dfqin.grantor.PermissionListener;
+import com.github.dfqin.grantor.PermissionsUtil;
+import com.uuzuche.lib_zxing.activity.CaptureActivity;
+
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -54,6 +59,7 @@ public class HomeFragment extends BaseFragment {
         Intent intent = new Intent(getActivity(), SearchActivity.class);
         startActivity(intent);
     }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -68,10 +74,28 @@ public class HomeFragment extends BaseFragment {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.scanning:
+                requestCemera();
+
                 /*Intent intent = new Intent(getContext(), CaptureActivity.class);
                 startActivityForResult(intent, REQUEST_CODE);*/
                 break;
         }
+    }
+    //权限
+    private void  requestCemera(){
+        PermissionsUtil.requestPermission(getActivity(), new PermissionListener() {
+            @Override
+            public void permissionGranted(@NonNull String[] permissions) {
+                Intent intent = new Intent(getActivity(), CaptureActivity.class);
+                startActivityForResult(intent, REQUEST_CODE);
+                Toast.makeText(getContext(), "访问摄像头", Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void permissionDenied(@NonNull String[] permissions) {
+                Toast.makeText(getContext(), "用户拒绝了访问摄像头", Toast.LENGTH_LONG).show();
+            }
+        }, Manifest.permission.CAMERA);
     }
     private void InitFunctionBall() {
         List<String> bannerBallRowsBeans = new ArrayList<>();

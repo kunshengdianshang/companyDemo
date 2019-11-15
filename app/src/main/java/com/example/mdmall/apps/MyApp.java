@@ -4,6 +4,8 @@ import android.app.Application;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
+import androidx.multidex.MultiDex;
+
 import com.example.mdmall.R;
 import com.example.mdmall.datastock.DaoMaster;
 import com.example.mdmall.datastock.DaoSession;
@@ -61,5 +63,6 @@ public class MyApp extends Application {
         super.onCreate();
         initGreenDao();
         ZXingLibrary.initDisplayOpinion(this);
+        MultiDex.install(this);
     }
 }

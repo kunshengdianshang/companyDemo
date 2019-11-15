@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mdmall.BaseFragment;
 import com.example.mdmall.R;
+import com.example.mdmall.activity.PositioningActivity;
 import com.example.mdmall.activity.SearchActivity;
 import com.example.mdmall.adapter.NsGvHandPickRecommendAdapter;
 import com.example.mdmall.adapter.RvFunctionBallAdapter;
@@ -70,7 +71,7 @@ public class HomeFragment extends BaseFragment {
         InitRecommended();
         return homeView;
     }
-    @OnClick({R.id.scanning})
+    @OnClick({R.id.scanning,R.id.home_set})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.scanning:
@@ -78,6 +79,9 @@ public class HomeFragment extends BaseFragment {
 
                 /*Intent intent = new Intent(getContext(), CaptureActivity.class);
                 startActivityForResult(intent, REQUEST_CODE);*/
+                break;
+            case R.id.home_set:
+                startActivity(new Intent(getActivity(), PositioningActivity.class));
                 break;
         }
     }

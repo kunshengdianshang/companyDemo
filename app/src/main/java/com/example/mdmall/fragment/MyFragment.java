@@ -14,6 +14,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.example.mdmall.BaseFragment;
 import com.example.mdmall.R;
+import com.example.mdmall.activity.LoginActivity;
 import com.example.mdmall.activity.DingDanActivity;
 import com.example.mdmall.activity.MyCollectedActivity;
 import com.example.mdmall.activity.RelaNameActivity;
@@ -48,7 +49,7 @@ public class MyFragment extends BaseFragment {
         Intent intent = new Intent(getActivity(), RelaNameActivity.class);
         startActivity(intent);
     }
-    @OnClick({R.id.my_focus,R.id.my_in})
+    @OnClick({R.id.my_focus,R.id.my_in,R.id.my_login})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.my_focus:
@@ -56,6 +57,9 @@ public class MyFragment extends BaseFragment {
                 break;
             case R.id.my_in:
                 startActivity(new Intent(getActivity(), StoreActivity.class));
+                break;
+            case R.id.my_login:
+                startActivity(new Intent(getActivity(), LoginActivity.class));
                 break;
         }
     }

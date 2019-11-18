@@ -12,4 +12,6 @@
     <color name="white">#fff</color>
     <color name="black_252525">#252525</color>
     <color name="red_C93838">#C93838</color>
+    <color name="gray_8d8d8d">#8D8D8D</color>
+    <color name="gray_EFEFEF">#EFEFEF</color>
 </resources>

@@ -43,7 +43,7 @@ public class ClassifyFragment extends BaseFragment {
     private ClassifyAdapter classifyAdapter;
     private SecondaryAdapter secondaryAdapter;
     private ImageView image;
-
+    private int a=0;
     public static ClassifyFragment getInstance() {
         if (classifyFragment == null) classifyFragment = new ClassifyFragment();
         return classifyFragment;
@@ -60,7 +60,10 @@ public class ClassifyFragment extends BaseFragment {
        // EventBus.getDefault().register(this);
         InitExt();
         View header = getLayoutInflater().inflate(R.layout.twocategory_top, null);
-        secondary_listView.addHeaderView(header);
+        if (a==0){
+            secondary_listView.addHeaderView(header);
+            a=1;
+        }
         image = header.findViewById(R.id.image);
         //点击切换事件
         first_listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

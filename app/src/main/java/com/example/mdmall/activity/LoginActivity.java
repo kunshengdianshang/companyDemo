@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -17,7 +18,7 @@ import butterknife.OnClick;
 
 public class LoginActivity extends BaseActivity {
     @BindView(R.id.login_pass)
-    TextView login_pass;
+    EditText login_pass;
     @BindView(R.id.login_visible)
     ImageView login_visible;
     @BindView(R.id.login_code)
@@ -41,6 +42,7 @@ public class LoginActivity extends BaseActivity {
                 finish();
                 break;
             case R.id.login_quick:
+                login_pass.setText("");
                 if (a.equals("0")) {
                     login_pass.setHint("请输入验证码");
                     login_visible.setVisibility(View.GONE);

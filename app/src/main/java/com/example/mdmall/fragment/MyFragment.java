@@ -53,10 +53,10 @@ public class MyFragment extends BaseFragment {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.my_focus:
-                startActivity(new Intent(getActivity(), TenantsActivity.class));
+                startActivity(new Intent(getActivity(), StoreActivity.class));
                 break;
             case R.id.my_in:
-                startActivity(new Intent(getActivity(), StoreActivity.class));
+                startActivity(new Intent(getActivity(), TenantsActivity.class));
                 break;
             case R.id.my_login:
                 startActivity(new Intent(getActivity(), LoginActivity.class));

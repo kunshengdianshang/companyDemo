@@ -5,7 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.PositioningActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/gray_EFEFEF"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    >
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_64"
@@ -26,6 +30,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/dp_30"/>
         <TextView
+            android:id="@+id/text_replace"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="手动获取"
@@ -37,11 +42,12 @@
     </RelativeLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/dp_50"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:layout_marginTop="@dimen/dp_12">
+        >
         <TextView
+            android:id="@+id/text_location_city"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="沈阳"
@@ -54,35 +60,59 @@
             android:src="@mipmap/ic_launcher"
             android:scaleType="fitXY"
             android:layout_marginLeft="@dimen/dp_3"/>
-        <LinearLayout
+        <RelativeLayout
+            android:layout_marginLeft="@dimen/dp_13"
             android:id="@+id/search_linearlayout"
-            android:layout_width="@dimen/dp_289"
+            android:layout_width="@dimen/dp_282"
             android:layout_height="@dimen/dp_26"
             android:orientation="horizontal"
             android:layout_gravity="center_vertical"
-            android:layout_weight="1"
+
             android:background="@drawable/bg_search">
             <ImageView
-                android:layout_width="19dp"
-                android:layout_height="19dp"
+                android:layout_width="@dimen/dp_13"
+                android:layout_height="@dimen/dp_13"
                 android:src="@mipmap/search"
-                android:layout_gravity="center_vertical"
+                android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="7dp"
-                android:layout_marginBottom="5dp"/>
+               />
             <EditText
-                android:id="@+id/search_edit"
+                android:layout_marginRight="@dimen/dp_10"
+                android:singleLine="true"
+                android:imeOptions="actionSearch"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:id="@+id/edit_search"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="10dp"
+                android:textSize="@dimen/sp_12"
                 android:textColorHint="#FF999999"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
                 android:hint="请输入您的收货地址"
                 android:background="@null"
-                android:layout_marginLeft="11dp"
-                android:focusable="false" />
-        </LinearLayout>
+                android:layout_marginLeft="@dimen/dp_35"
+                 />
+        </RelativeLayout>
     </LinearLayout>
+    <com.amap.api.maps.MapView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_224"
+        android:id="@+id/map"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_10"
+        android:background="@color/gray_EFEFEF"
+        />
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+
+        android:id="@+id/smart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recy"
+            />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
 </LinearLayout>

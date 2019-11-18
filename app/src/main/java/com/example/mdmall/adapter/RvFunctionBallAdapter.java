@@ -13,6 +13,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.mdmall.R;
+import com.example.mdmall.activity.DetailsActivity;
+import com.example.mdmall.activity.ProductListActivity;
 
 import java.util.List;
 
@@ -41,6 +43,12 @@ public class RvFunctionBallAdapter extends RecyclerView.Adapter<RvFunctionBallAd
         holder.tvName.setText(data.get(position));
         Glide.with(context).load(R.mipmap.ic_launcher).into(holder.ivImg);
        // holder.llItem.setLayoutParams(new LinearLayout.LayoutParams(UIutils.getWidth(context)/5, ViewGroup.LayoutParams.WRAP_CONTENT));
+        holder.llItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ProductListActivity.open(context,""+holder.tvName.getText().toString());
+            }
+        });
     }
 
     @Override

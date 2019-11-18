@@ -65,4 +65,5 @@ public class MyApp extends Application {
         ZXingLibrary.initDisplayOpinion(this);
         MultiDex.install(this);
     }
+
 }

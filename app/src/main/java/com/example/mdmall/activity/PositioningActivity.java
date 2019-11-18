@@ -1,9 +1,11 @@
 package com.example.mdmall.activity;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.Manifest;
 import android.content.Context;
 import android.os.Bundle;
 import android.text.Editable;
@@ -41,6 +43,8 @@ import com.example.mdmall.BaseActivity;
 import com.example.mdmall.R;
 import com.example.mdmall.adapter.PoiOtherMessageAdapter;
 import com.example.mdmall.bean.PoiAddressBean;
+import com.github.dfqin.grantor.PermissionListener;
+import com.github.dfqin.grantor.PermissionsUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -89,35 +93,48 @@ public class PositioningActivity extends BaseActivity implements LocationSource,
         map.onCreate(savedInstanceState);
         //初始化地图
         initMap();
-        //蓝点定位
-        initBlueLocation();
 
-        edit_search.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+        PermissionsUtil.requestPermission(getApplication(), new PermissionListener() {
             @Override
-            public void onFocusChange(View view, boolean hasFocus) {
-                if(!hasFocus){
-                    InputMethodManager manager = ((InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE));
-                    if (manager != null)
-                        manager.hideSoftInputFromWindow(view.getWindowToken(),InputMethodManager.HIDE_NOT_ALWAYS);
-                }else{
+            public void permissionGranted(@NonNull String[] permissions) {
+                //蓝点定位
+                initBlueLocation();
 
-                }
+                edit_search.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+                    @Override
+                    public void onFocusChange(View view, boolean hasFocus) {
+                        if(!hasFocus){
+                            InputMethodManager manager = ((InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE));
+                            if (manager != null)
+                                manager.hideSoftInputFromWindow(view.getWindowToken(),InputMethodManager.HIDE_NOT_ALWAYS);
+                        }else{
+
+                        }
+                    }
+                });
+                edit_search.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+                    @Override
+                    public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                        if (actionId == EditorInfo.IME_ACTION_SEARCH){
+                            InputMethodManager manager = ((InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE));
+                            if (manager != null)
+                                manager.hideSoftInputFromWindow(edit_search.getWindowToken(),InputMethodManager.HIDE_NOT_ALWAYS);
+
+                            initPoiSearch(edit_search.getText().toString());
+                            return true;
+                        }
+                        return false;
+                    }
+                });
             }
-        });
-        edit_search.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+
             @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                if (actionId == EditorInfo.IME_ACTION_SEARCH){
-                    InputMethodManager manager = ((InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE));
-                    if (manager != null)
-                        manager.hideSoftInputFromWindow(edit_search.getWindowToken(),InputMethodManager.HIDE_NOT_ALWAYS);
-
-                    initPoiSearch(edit_search.getText().toString());
-                    return true;
-                }
-                return false;
+            public void permissionDenied(@NonNull String[] permissions) {
+               finish();
             }
-        });
+        }, Manifest.permission.ACCESS_COARSE_LOCATION);
+
+
 
     }
     private int page=0;

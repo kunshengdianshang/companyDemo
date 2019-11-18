@@ -28,6 +28,12 @@
     <!--用于申请调用A-GPS模块-->
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"></uses-permission>
 
+
+    <!--————————————————
+    版权声明：本文为CSDN博主「皮皮0820」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
+    原文链接：https://blog.csdn.net/qq_41211701/article/details/91557177-->
+
+
     <application
         android:name=".apps.MyApp"
         android:allowBackup="true"
@@ -36,6 +42,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <uses-library
+
+            android:name="org.apache.http.legacy"
+
+            android:required="false" />
 
         <meta-data android:name="com.amap.api.v2.apikey" android:value="7453bc5a4a57c062992c7af21886b085">
 <!--            //开发者申请的key-->

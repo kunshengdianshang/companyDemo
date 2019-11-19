@@ -6,6 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".activity.TenantsActivity"
     android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/tenants_return"
+            android:layout_width="@dimen/dp_10"
+            android:layout_height="@dimen/dp_19"
+            android:background="@mipmap/return_img"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_marginLeft="@dimen/dp_20"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="商家入驻"
+            android:textColor="#000000"
+            android:textSize="@dimen/sp_16"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_30"/>
+    </RelativeLayout>
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nsv_hand_pick"
         android:layout_width="match_parent"
@@ -17,24 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <ImageView
-                    android:layout_width="@dimen/dp_10"
-                    android:layout_height="@dimen/dp_19"
-                    android:background="@mipmap/return_img"
-                    android:layout_marginTop="@dimen/dp_30"
-                    android:layout_marginLeft="@dimen/dp_20"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="商家入驻"
-                    android:textColor="#000000"
-                    android:textSize="@dimen/sp_16"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="@dimen/dp_30"/>
-            </RelativeLayout>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -251,7 +253,7 @@
                     <ImageView
                         android:layout_width="@dimen/dp_91"
                         android:layout_height="@dimen/dp_54"
-                        android:background="@mipmap/icon_yingyezhizhao"
+                        android:src="@mipmap/icon_yingyezhizhao"
                         android:layout_marginTop="@dimen/dp_23"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -293,7 +295,7 @@
                         android:layout_width="@dimen/dp_91"
                         android:layout_height="@dimen/dp_54"
                         android:layout_marginTop="@dimen/dp_23"
-                        android:background="@mipmap/shenfenz_zhnegmian" />
+                        android:src="@mipmap/shenfenz_zhnegmian" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -313,9 +315,9 @@
 
                     <ImageView
                         android:layout_width="@dimen/dp_91"
-                        android:layout_height="56dp"
+                        android:layout_height="@dimen/dp_54"
                         android:layout_marginTop="@dimen/dp_23"
-                        android:background="@mipmap/shenfenz_fanmian" />
+                        android:src="@mipmap/shenfenz_fanmian" />
 
                     <TextView
                         android:layout_width="wrap_content"

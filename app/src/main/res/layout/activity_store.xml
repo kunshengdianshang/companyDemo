@@ -11,6 +11,7 @@
         android:layout_height="@dimen/dp_64"
         android:background="#FFCF31">
         <ImageView
+            android:id="@+id/store_return"
             android:layout_width="@dimen/dp_10"
             android:layout_height="@dimen/dp_19"
             android:background="@mipmap/return_img"
@@ -25,6 +26,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/dp_30"/>
         <ImageView
+            android:id="@+id/store_seach"
             android:layout_width="@dimen/dp_18"
             android:layout_height="@dimen/dp_18"
             android:background="@mipmap/icon_sousuo"
@@ -32,6 +34,7 @@
             android:layout_marginTop="@dimen/dp_30"
             android:layout_marginRight="@dimen/dp_62"/>
         <TextView
+            android:id="@+id/store_guan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="管理"
@@ -55,24 +58,23 @@
         android:overScrollMode="never"
         android:scrollbars="none">
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/store_recycler"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
         </androidx.recyclerview.widget.RecyclerView>
     </androidx.core.widget.NestedScrollView>
     </com.andview.refreshview.XRefreshView>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_0_5"
-        android:background="#EFEFEF"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="@dimen/dp_40"/>
     <LinearLayout
+        android:id="@+id/store_linear"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_40"
         android:orientation="horizontal"
         android:layout_alignParentBottom="true"
-        android:gravity="center_vertical">
-        <RadioButton
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:background="#fff">
+        <CheckBox
+            android:id="@+id/store_box"
             android:layout_width="@dimen/dp_16"
             android:layout_height="@dimen/dp_16"
             android:layout_marginLeft="@dimen/dp_23"
@@ -93,7 +95,7 @@
             android:textColor="#252525"
             android:textSize="@dimen/dp_12"
             android:gravity="center"
-            android:background="@drawable/rounded_text_back"
+            android:background="@mipmap/yuanjiao1"
             android:layout_marginRight="@dimen/dp_6"/>
     </LinearLayout>
 </RelativeLayout>

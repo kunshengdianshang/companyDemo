@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:id="@+id/wishing_item_linear"
+    android:background="#D1D1D1">
+    <TextView
+        android:id="@+id/wishing_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="闹****u"
+        android:gravity="center"
+        android:textColor="#252525"
+        android:textSize="@dimen/sp_10"
+        android:layout_weight="1"
+        android:layout_marginLeft="@dimen/dp_7" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="166****5515"
+        android:textSize="@dimen/sp_10"
+        android:textColor="#F9C732"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="4580.6"
+        android:textSize="@dimen/sp_10"
+        android:textColor="#252525"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10/16 10:20:23"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="#252525"
+        android:textSize="@dimen/sp_10"/>
+</LinearLayout>

@@ -21,9 +21,9 @@
             android:layout_marginLeft="@dimen/dp_20"
             android:layout_width="@dimen/dp_11"
             android:layout_height="@dimen/dp_19"
-            android:src="@mipmap/ic_launcher"
+            android:src="@mipmap/return_img"
             android:scaleType="fitXY"
-            />
+            android:onClick="rela_return"/>
         <TextView
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/dp_32"
@@ -241,7 +241,7 @@
         <ImageView
             android:layout_width="@dimen/dp_145"
             android:layout_height="@dimen/dp_126"
-            android:src="@mipmap/ic_launcher"
+            android:src="@mipmap/renzheng_chenggong"
             />
         <TextView
             android:layout_marginTop="@dimen/dp_33"

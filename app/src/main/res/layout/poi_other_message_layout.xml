@@ -13,7 +13,7 @@
             android:layout_centerVertical="true"
             android:layout_width="@dimen/dp_9"
             android:layout_height="@dimen/dp_9"
-            android:src="@mipmap/ic_launcher"
+            android:src="@mipmap/huiyuan"
             android:scaleType="fitXY"
             />
         <LinearLayout

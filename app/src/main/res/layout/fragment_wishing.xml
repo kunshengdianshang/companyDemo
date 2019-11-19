@@ -137,15 +137,18 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:layout_marginRight="@dimen/dp_35"
-                        android:layout_marginLeft="@dimen/dp_35"
-                        android:layout_marginTop="@dimen/dp_40">
+                        android:layout_marginLeft="@dimen/dp_18"
+                        android:layout_marginRight="@dimen/dp_16"
+                        android:layout_marginTop="@dimen/dp_40"
+                        android:gravity="center_horizontal">
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="用户昵称"
                             android:textColor="#6F432B"
-                            android:textSize="@dimen/sp_12" />
+                            android:textSize="@dimen/sp_12"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -167,14 +170,19 @@
                             android:layout_height="wrap_content"
                             android:text="付款时间"
                             android:textColor="#6F432B"
-                            android:textSize="@dimen/sp_12" />
+                            android:textSize="@dimen/sp_12"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:layout_marginRight="@dimen/dp_5"/>
                     </LinearLayout>
-                    <androidx.recyclerview.widget.RecyclerView
+                    <com.example.mdmall.view.AutoPollRecyclerView
+                        android:id="@+id/invitation_recycler"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/dp_35"
-                        android:layout_marginRight="@dimen/dp_35"
-                        android:layout_marginTop="@dimen/dp_10"></androidx.recyclerview.widget.RecyclerView>
+                        android:layout_marginLeft="@dimen/dp_18"
+                        android:layout_marginRight="@dimen/dp_16"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginBottom="@dimen/dp_5"></com.example.mdmall.view.AutoPollRecyclerView>
                 </LinearLayout>
             </RelativeLayout>
         </LinearLayout>

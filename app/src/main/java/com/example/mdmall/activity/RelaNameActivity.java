@@ -83,4 +83,8 @@ public class RelaNameActivity extends BaseActivity {
         setContentView(R.layout.activity_rela_name);
         ButterKnife.bind(this);
     }
+    //返回
+    public void rela_return(View view) {
+        finish();
+    }
 }

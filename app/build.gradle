@@ -29,6 +29,11 @@ android {
             maven { url 'https://jitpack.io' }
         }
     }
+    //添加如下配置
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
 }
 
 dependencies {

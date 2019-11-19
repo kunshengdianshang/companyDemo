@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.mdmall.R;
+import com.example.mdmall.activity.ProductListActivity;
 
 import java.util.List;
 
@@ -55,6 +56,13 @@ public class SecondaryGridAdapter extends BaseAdapter {
         }
         holder.tvGoodsName.setText(data.get(i));
         Glide.with(context).load(R.mipmap.ic_launcher).into(holder.ivGoodsImg);
+        ViewHolder finalHolder = holder;
+        holder.linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ProductListActivity.open(context,""+ finalHolder.tvGoodsName.getText().toString());
+            }
+        });
         return view;
     }
 

@@ -49,6 +49,7 @@
             android:textColor="#252525"
             android:layout_marginLeft="@dimen/dp_22"/>
         <EditText
+            android:id="@+id/register_code"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@null"
@@ -58,6 +59,7 @@
             android:layout_marginLeft="@dimen/dp_11"
             android:layout_weight="1"/>
         <TextView
+            android:id="@+id/register_obtain"
             android:layout_width="@dimen/dp_75"
             android:layout_height="@dimen/dp_20"
             android:background="@mipmap/huoqu_yanzm"
@@ -82,6 +84,7 @@
             android:textColor="#252525"
             android:layout_marginLeft="@dimen/dp_22"/>
         <EditText
+            android:id="@+id/register_pass"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@null"
@@ -91,12 +94,14 @@
             android:layout_marginLeft="@dimen/dp_11"
             android:layout_weight="1"/>
         <ImageView
+            android:id="@+id/register_visible"
             android:layout_width="@dimen/dp_23"
             android:layout_height="@dimen/dp_20"
             android:layout_marginRight="@dimen/dp_24"
             android:src="@mipmap/yinchang" />
     </LinearLayout>
     <ImageView
+        android:id="@+id/register_but"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_40"
         android:layout_marginRight="@dimen/dp_15"

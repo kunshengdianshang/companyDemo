@@ -49,6 +49,7 @@
             android:textColor="#252525"
             android:layout_marginLeft="@dimen/dp_22"/>
         <EditText
+            android:id="@+id/register_phone_edit"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@null"

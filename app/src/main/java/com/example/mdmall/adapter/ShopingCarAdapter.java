@@ -10,20 +10,29 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mdmall.R;
+import com.example.mdmall.bean.ShopCarBean;
+import com.example.mdmall.interfaces.ShopCarInterface;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class ShopingCarAdapter extends RecyclerView.Adapter {
+public class ShopingCarAdapter extends RecyclerView.Adapter implements ShopCarInterface{
     private Context context;
-    private int select=1;
     private ShopingCarChildAdapter shopingCarChildAdapter;
-
+    private List<ShopCarBean> list=null;
+    private ShopCarInterface shopCarInterface;
+    public void setShopCarInterface(ShopCarInterface shopCarInterface){
+        this.shopCarInterface=shopCarInterface;
+    }
     public ShopingCarAdapter(Context context) {
         this.context = context;
+        this.list=new ArrayList<>();
     }
-    public void setSelectStatus(int select){
-        this.select=select;
+    public void setData(List<ShopCarBean> list){
+        this.list=list;
     }
     @NonNull
     @Override
@@ -33,18 +42,56 @@ public class ShopingCarAdapter extends RecyclerView.Adapter {
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-          CollectedViewHolder cvh= (CollectedViewHolder) holder;
-          cvh.recy.setLayoutManager(new LinearLayoutManager(context));
+              CollectedViewHolder cvh= (CollectedViewHolder) holder;
+        if(list.get(position).isSelected()){
+            cvh.img_select.setImageResource(R.mipmap.icon_xuanzhong);
+        }else{
+            cvh.img_select.setImageResource(R.mipmap.icon_weixuanze);
+        }
+        cvh.recy.setLayoutManager(new LinearLayoutManager(context));
         shopingCarChildAdapter = new ShopingCarChildAdapter(context);
-              cvh.img_select.setVisibility(View.VISIBLE);
+        shopingCarChildAdapter.setChildData(list.get(position).getSelectedList());
+        shopingCarChildAdapter.setShopCarInterface(this);
+        shopingCarChildAdapter.setIndex(position);
+        cvh.recy.setAdapter(shopingCarChildAdapter);
+        cvh.img_select.setVisibility(View.VISIBLE);
 
-          cvh.recy.setAdapter(shopingCarChildAdapter);
+
+        cvh.img_select.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(shopCarInterface==null){
+                    return;
+                }
+
+                 if(list.get(position).isSelected()){
+                    shopCarInterface.isSelectIfShop(!list.get(position).isSelected(),position,-1,null);
+                 }else{
+                     shopCarInterface.setShopCarAllImageChecked(false);
+                     shopCarInterface.isSelectIfShop(!list.get(position).isSelected(),position,-1,null);
+
+                 }
+            }
+        });
+
+
     }
 
     @Override
     public int getItemCount() {
-        return 3;
+        return list.size();
     }
+
+    @Override
+    public void setShopCarAllImageChecked(boolean isSele) {
+
+    }
+
+    @Override
+    public void isSelectIfShop(boolean isSele, int positon,int childPosition,List<ShopCarBean.ShopChildBean> childList) {
+               shopCarInterface.isSelectIfShop(isSele,positon,childPosition,childList);
+    }
+
     public class CollectedViewHolder extends RecyclerView.ViewHolder{
         @BindView(R.id.recy)
         RecyclerView recy;

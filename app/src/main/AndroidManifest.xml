@@ -55,7 +55,6 @@
 <!--            //开发者申请的key-->
         </meta-data>
 
-        <activity android:name=".activity.PositioningActivity"></activity>
         <activity android:name=".activity.RegisterPhoneActivity" />
         <activity android:name=".activity.RegisterActivity" />
         <activity android:name=".activity.LoginActivity" />

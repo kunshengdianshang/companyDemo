@@ -6,18 +6,23 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.mdmall.BaseActivity;
 import com.example.mdmall.R;
 import com.example.mdmall.adapter.CollectedAdapter;
+import com.example.mdmall.bean.ShopCarBean;
+import com.example.mdmall.interfaces.ShopCarInterface;
+
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class MyCollectedActivity extends BaseActivity {
+public class MyCollectedActivity extends BaseActivity implements ShopCarInterface {
 
     @BindView(R.id.rela_bottom)
     RelativeLayout rela_bottom;
@@ -57,4 +62,15 @@ public class MyCollectedActivity extends BaseActivity {
         recy.setLayoutManager(new LinearLayoutManager(this));
         recy.setAdapter(collectedAdapter);
     }
+
+    @Override
+    public void setShopCarAllImageChecked(boolean isSele) {
+
+    }
+
+    @Override
+    public void isSelectIfShop(boolean isSele, int positon, int childPosition, List<ShopCarBean.ShopChildBean> li) {
+
+    }
+
 }

@@ -9,6 +9,10 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mdmall.R;
+import com.example.mdmall.bean.ShopCarBean;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.ButterKnife;
 
@@ -18,7 +22,6 @@ public class WeiNiTuiJianAdapter extends RecyclerView.Adapter {
     public WeiNiTuiJianAdapter(Context context) {
         this.context = context;
     }
-
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

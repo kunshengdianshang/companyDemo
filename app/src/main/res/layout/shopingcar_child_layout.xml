@@ -98,6 +98,7 @@
             android:gravity="center_vertical"
             >
             <TextView
+                android:id="@+id/text_jian"
                 android:gravity="center"
                 android:layout_width="@dimen/dp_25"
                 android:layout_height="match_parent"
@@ -111,6 +112,7 @@
                 android:background="#EEEEEE"
                 />
             <TextView
+                android:id="@+id/text_count"
                 android:layout_weight="3"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -125,6 +127,7 @@
                 android:background="#EEEEEE"
                 />
             <TextView
+                android:id="@+id/text_jia"
                 android:gravity="center"
                 android:layout_width="@dimen/dp_25"
                 android:layout_height="match_parent"

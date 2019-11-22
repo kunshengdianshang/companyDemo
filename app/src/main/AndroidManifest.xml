@@ -10,29 +10,14 @@
 
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
-
-    <!--允许程序打开网络套接字-->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <!--允许程序设置内置sd卡的写权限-->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <!--允许程序获取网络状态-->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <!--允许程序访问WiFi网络信息-->
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <!--允许程序读写手机状态和身份-->
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <!--允许程序访问CellID或WiFi热点来获取粗略的位置-->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <!--用于申请调用A-GPS模块-->
-    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"></uses-permission>
-
-
-    <!--————————————————
-    版权声明：本文为CSDN博主「皮皮0820」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
-    原文链接：https://blog.csdn.net/qq_41211701/article/details/91557177-->
-
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 允许程序打开网络套接字 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 允许程序设置内置sd卡的写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 允许程序获取网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 允许程序访问WiFi网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 允许程序读写手机状态和身份 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 允许程序访问CellID或WiFi热点来获取粗略的位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
 
     <application
         android:name=".apps.MyApp"
@@ -42,17 +27,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.ProductListActivity"></activity>
+        <activity android:name=".activity.DingDanDetailsActivity"></activity>
+        <activity android:name=".activity.SettingActivity" />
+        <activity android:name=".activity.MessageActivity" />
+        <activity android:name=".activity.ProductListActivity" />
         <activity android:name=".activity.PositioningActivity" />
 
         <uses-library
-
             android:name="org.apache.http.legacy"
-
             android:required="false" />
 
-        <meta-data android:name="com.amap.api.v2.apikey" android:value="7453bc5a4a57c062992c7af21886b085">
-<!--            //开发者申请的key-->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="7453bc5a4a57c062992c7af21886b085">
+
+            <!-- //开发者申请的key -->
         </meta-data>
 
         <activity android:name=".activity.RegisterPhoneActivity" />
@@ -73,11 +62,8 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!--高德service-->
+        </activity> <!-- 高德service -->
         <service android:name="com.amap.api.location.APSService" />
-
     </application>
 
 </manifest>

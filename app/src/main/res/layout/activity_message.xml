@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MessageActivity">
+    <RelativeLayout
+        android:id="@+id/rela_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_64"
+        android:background="#FFCF31"
+        >
+        <ImageView
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_width="@dimen/dp_11"
+            android:layout_height="@dimen/dp_19"
+            android:src="@mipmap/ic_launcher"
+            android:scaleType="fitXY"
+            />
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="消息"
+            android:textSize="@dimen/sp_16"
+            android:textColor="#252525"
+            android:gravity="center"
+            />
+
+    </RelativeLayout>
+     <androidx.recyclerview.widget.RecyclerView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:id="@+id/recy"
+         />
+
+</LinearLayout>

@@ -62,7 +62,7 @@ public class DetailsActivity extends BaseActivity {
     private void getEvaluation(){
         List<String> list = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            list.add("有图(8)");
+            list.add("有图(81)");
         }
         details_evaluation.setAdapter(new FlowAdapter(list) {
             @Override

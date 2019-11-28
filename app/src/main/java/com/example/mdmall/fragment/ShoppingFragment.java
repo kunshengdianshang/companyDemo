@@ -1,5 +1,6 @@
 package com.example.mdmall.fragment;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -15,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mdmall.BaseFragment;
 import com.example.mdmall.R;
+import com.example.mdmall.activity.DingDanDetailsActivity;
 import com.example.mdmall.adapter.ShopingCarAdapter;
 import com.example.mdmall.adapter.WeiNiTuiJianAdapter;
 import com.example.mdmall.bean.ShopCarBean;
@@ -94,6 +96,11 @@ public class ShoppingFragment extends BaseFragment implements ShopCarInterface {
     }
 
 
+    @OnClick(R.id.text_qujiesuan)
+    public void text_qujiesuan_Click(){
+        Intent intent = new Intent(getActivity(), DingDanDetailsActivity.class);
+        startActivity(intent);
+    }
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

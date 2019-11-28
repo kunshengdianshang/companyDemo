@@ -16,8 +16,10 @@ import com.example.mdmall.BaseFragment;
 import com.example.mdmall.R;
 import com.example.mdmall.activity.LoginActivity;
 import com.example.mdmall.activity.DingDanActivity;
+import com.example.mdmall.activity.MessageActivity;
 import com.example.mdmall.activity.MyCollectedActivity;
 import com.example.mdmall.activity.RelaNameActivity;
+import com.example.mdmall.activity.SettingActivity;
 import com.example.mdmall.activity.StoreActivity;
 import com.example.mdmall.activity.TenantsActivity;
 import com.google.android.material.tabs.TabLayout;
@@ -44,18 +46,18 @@ public class MyFragment extends BaseFragment {
         Intent intent = new Intent(getActivity(), MyCollectedActivity.class);
         startActivity(intent);
     }
-    @OnClick(R.id.text_shiming)
+    @OnClick(R.id.rela_real_name)
     public void text_shiming_Click(){
         Intent intent = new Intent(getActivity(), RelaNameActivity.class);
         startActivity(intent);
     }
-    @OnClick({R.id.my_focus,R.id.my_in,R.id.my_login})
+    @OnClick({R.id.my_focus,R.id.rela_shop_in,R.id.my_login})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.my_focus:
                 startActivity(new Intent(getActivity(), StoreActivity.class));
                 break;
-            case R.id.my_in:
+            case R.id.rela_shop_in:
                 startActivity(new Intent(getActivity(), TenantsActivity.class));
                 break;
             case R.id.my_login:
@@ -63,7 +65,7 @@ public class MyFragment extends BaseFragment {
                 break;
         }
     }
-    @OnClick(R.id.rela_wodedingdan)
+    @OnClick(R.id.text_lookAll)
     public void rela_wodedingdan_Click(){
         Intent intent = new Intent(getActivity(), DingDanActivity.class);
         startActivity(intent);
@@ -75,13 +77,21 @@ public class MyFragment extends BaseFragment {
     @BindView(R.id.rela_daipingjia)
     RelativeLayout rela_daipingjia;
 
-
+    @OnClick(R.id.img_xiaoxi)
+    public void img_xiaoxi_Click(){
+        Intent intent = new Intent(getActivity(), MessageActivity.class);
+        startActivity(intent);
+    }
+    @OnClick(R.id.img_setting)
+    public void img_setting_Click(){
+        Intent intent = new Intent(getActivity(), SettingActivity.class);
+        startActivity(intent);
+    }
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         if (view == null) view = inflater.inflate(R.layout.fragment_my, container, false);
         ButterKnife.bind(this, view);
-       // EventBus.getDefault().register(this);
 
         return view;
     }
